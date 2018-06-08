@@ -1,3 +1,3 @@
-# cayuse-Geo-Data-app
+# Cayuse Geo Data Report
 
-A geographic-data application exercise for Cayuse.
+A geographic-data reporting application exercise for Cayuse.
