@@ -1,2 +1,3 @@
-# cayuse-weather-app
-A weather application exercise for Cayuse. 
+# Cayuse Geo Data Report
+
+A geographic-data reporting application exercise for Cayuse.

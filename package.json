@@ -1,5 +1,5 @@
 {
-  "name": "cayuse-weather-app",
+  "name": "cayuse-geo-data-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
