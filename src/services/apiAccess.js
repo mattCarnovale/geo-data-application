@@ -2,7 +2,7 @@ import { Weather, Google } from './apiConstants';
 
 const apiAccess = () => {
   const fetchCityAndTempFromOpenWeather = requestedZipCode => {
-    return fetch(Weather.WEATHER_API + `${requestedZipCode}` + Weather.UNITS + Weather.API_KEY);
+    return fetch(Weather.WEATHER_API + `${requestedZipCode}` + Weather.UNITS + Weather.SECRET);
   };
 
   const getCityAndTemp = requestedZipCode => {
@@ -20,7 +20,7 @@ const apiAccess = () => {
   };
 
   const fetchTimeZoneFromGoogle = (latitude, longitude) => {
-    return fetch(Google.TIMEZONE_API + `${latitude},${longitude}` + Google.TIMESTAMP + Google.API_KEY);
+    return fetch(Google.TIMEZONE_API + `${latitude},${longitude}` + Google.TIMESTAMP + Google.SECRET);
   };
 
   const getTimeZone = geoData => {
@@ -38,7 +38,7 @@ const apiAccess = () => {
   };
 
   const fetchElevationFromGoogle = (latitude, longitude) => {
-    return fetch(Google.ELEVATION_API + `${latitude},${longitude}` + Google.API_KEY);
+    return fetch(Google.ELEVATION_API + `${latitude},${longitude}` + Google.SECRET);
   };
 
   const getElevation = geoData => {
