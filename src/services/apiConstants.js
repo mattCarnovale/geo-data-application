@@ -1,6 +1,3 @@
-//http://api.openweathermap.org/data/2.5/weather?id=524901&APPID={APIKEY}
-//https://api.develop.apps.cayuse.com/testproxy/data/2.5/weather?zip={zip code}&APPID={APIKEY}
-
 export const Weather = {
   WEATHER_API: `https://api.develop.apps.cayuse.com/testproxy/data/2.5/weather?zip=`,
   UNITS: `&units=imperial`,
