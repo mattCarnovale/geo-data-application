@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../css/styles.css';
 
 class ZipCodeForm extends Component {
@@ -8,11 +9,11 @@ class ZipCodeForm extends Component {
     event.preventDefault();
     //Set a const var to capture the ref
     const userZipCode = this.zipCodeRef.current.value;
-    console.log(userZipCode);
 
     //Do some input checking on the input to see if it's worth hitting the api
 
     //Call on the submit function passed through props or a service
+    this.props.getGeoDataReport(userZipCode);
 
     //reset the form
     event.currentTarget.reset();
@@ -33,5 +34,9 @@ class ZipCodeForm extends Component {
     );
   }
 }
+
+ZipCodeForm.propTypes = {
+  getGeoDataReport: PropTypes.func,
+};
 
 export default ZipCodeForm;
