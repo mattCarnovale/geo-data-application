@@ -11,12 +11,27 @@ class ZipCodeForm extends Component {
     const userZipCode = this.zipCodeRef.current.value;
 
     //Do some input checking on the input to see if it's worth hitting the api
-
-    //Call on the submit function passed through props or a service
-    this.props.getGeoDataReport(userZipCode);
+    if (this.validateZipCodeInput(userZipCode)) {
+      //Call on the submit function passed through props or a service
+      this.props.getGeoDataReport(userZipCode);
+    }
 
     //reset the form
     event.currentTarget.reset();
+  };
+
+  validateZipCodeInput = requestedZipCode => {
+    if (requestedZipCode.length !== 5) {
+      //update message
+      console.log('Incorrect length for a US zipcode');
+      return false;
+    } else if (isNaN(requestedZipCode)) {
+      //update message
+      console.log('Not a number!');
+      return false;
+    }
+    //update message to ''
+    return true;
   };
 
   render() {

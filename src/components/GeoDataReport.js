@@ -8,7 +8,7 @@ class GeoDataReport extends Component {
     const { name, temp, timezone, elevation } = this.props.geoData;
     return (
       <div className="geo-data-report">
-        <h3>Geo-Data Report:</h3>
+        <h3>Your Geo-Data Report:</h3>
         <li>City Name: {name}</li>
         <li>Temperature: {temp}°</li>
         <li>Timezone: {timezone}</li>
