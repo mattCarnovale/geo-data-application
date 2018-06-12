@@ -13,8 +13,14 @@ class App extends Component {
   getGeoDataReport = requestedZipCode => {
     apiAccess
       .getGeoDataReport(requestedZipCode)
-      .then(geoData => {
-        this.setState({ geoData });
+      .then(data => {
+        const geoData = data;
+        if (geoData === undefined) {
+          //Only update state if the call was successful
+          console.warn('The api call has failed.');
+        } else {
+          this.setState({ geoData });
+        }
       })
       .catch(error => console.warn(error));
   };
