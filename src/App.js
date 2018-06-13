@@ -17,7 +17,7 @@ class App extends Component {
         const geoData = data;
         if (geoData === undefined) {
           //Only update state if the call was successful
-          console.warn('The api call has failed.');
+          console.warn('The api call was unsuccessful');
         } else {
           this.setState({ geoData });
         }
