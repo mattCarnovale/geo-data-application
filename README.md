@@ -50,6 +50,7 @@ REACT_APP_GOOGLE_SECRET=<your key here>;
 - [x] Add some input checking on the Zip Code form to ensure the user requests a valid US zip code
 - [ ] Add error message state to render a message comminucating why the input is invalid (_currently reports to console_).
 - [ ] Add a state variable to manage how the Geo-Data report is rendered--displayed versus not displayed until report exists.
+- [ ] Handle error when a user enters input that is a valid type and length but doesn't correspond to a city(api call responds with a 404)  
 
 #### V.1.1: Convert to Full-Stack application by using Node.js to serve Api calls to the frontend.
 
