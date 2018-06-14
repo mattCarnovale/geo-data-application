@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="cayuse-geo-data-app">
+      <div className="geo-data-app">
         <Header company="Cayuse" appType="Geo-Data Report Application" />
         <ZipCodeForm getGeoDataReport={this.getGeoDataReport} />
         <GeoDataReport geoData={this.state.geoData} />
